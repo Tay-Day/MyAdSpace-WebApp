@@ -10,17 +10,13 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.HashMap;
 
-@Document
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Influencer {
-    @Id
+
     private ObjectId id;
     private String name;
 
     // Mapping from Site to Links
-    @DocumentReference
     private HashMap<Sites, String> links;
 
     // Mapping from Site to subscriber count
